@@ -1,0 +1,285 @@
+/* Layout: Reichman blues on a Tel Aviv summer morning. Navy masthead, airy white
+   panels on a pale sky ground, and minimal one-line beach drawings (sea, sand, a
+   small sun) that change with each course's subject. Rubik, Tel Aviv's own
+   rounded sans, light for big headings and regular for text; Frank Ruhl Libre
+   for reading summaries. Light by day, a navy night variant. */
+:root {
+  /* Reichman blues */
+  --navy: #012b53;
+  --blue: #025d94;
+  --blue-2: #2f7fbf;
+  --on-blue: #ffffff;
+  --sky: #e6f0f8;
+
+  /* ground and surfaces */
+  --bg: #f4f8fb;
+  --surface: #ffffff;
+  --surface-2: #eef4f9;
+  --hover: #e8f0f7;
+  --line: #d5e1ec;
+  --line-soft: #e6eef5;
+  --line-strong: #012b53;
+
+  /* text */
+  --fg: #0d2238;
+  --muted: #546579;
+  --faint: #8a98a8;
+
+  --accent: #025d94;
+  --accent-soft: #e2eef8;
+  --accent-ink: #012b53;
+  --on-accent: #ffffff;
+  --primary: #012b53;
+  --on-primary: #ffffff;
+
+  /* drawings */
+  --ill-ink: #012b53;
+  --ill-sea: #a9cfea;
+  --ill-sand: #efe1c3;
+  --ill-sun: #f4c45e;
+  --ill-paper: #ffffff;
+  --ill-leaf: #a8d2bb;
+  --logo-bg: #012b53;
+  --logo-fg: #ffffff;
+
+  /* older names still used by components */
+  --ink: #012b53;
+  --sun: #f4c45e;
+  --sea: #a9cfea;
+  --coral: #d9573f;
+  --art-base: #012b53;
+  --art-fg: #ffffff;
+  --art-fg-2: rgb(255 255 255 / 0.82);
+  --glass: rgb(255 255 255 / 0.9);
+  --glass-line: #d5e1ec;
+
+  /* the paper page for summaries */
+  --paper: #ffffff;
+  --paper-ink: #13243a;
+  --paper-muted: #5f6e80;
+  --paper-line: #e1e8ef;
+  --paper-head: #eef4f9;
+  --desk-shadow: 0 1px 2px rgb(1 43 83 / 0.05), 0 20px 44px -26px rgb(1 43 83 / 0.3);
+
+  /* task colors */
+  --t-auto: #7d8a99;
+  --t-auto-bg: #ebf0f5;
+  --t-manual: #9a6a37;
+  --t-manual-bg: #f6eddf;
+  --t-required: #c8392b;
+  --t-required-bg: #fbe7e4;
+  --t-done: #2c7a4b;
+  --t-done-bg: #e1f1e7;
+
+  --warn: #9a6a00;
+  --warn-bg: #fdf1d4;
+
+  --f-body: "Rubik", "Heebo", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --f-display: "Rubik", "Heebo", system-ui, sans-serif;
+  --f-poster: "Rubik", "Heebo", system-ui, sans-serif;
+  --f-read: "Frank Ruhl Libre", "David Libre", "Times New Roman", serif;
+  --f-mono: "Rubik", ui-monospace, monospace;
+
+  --r: 14px;
+  --r-sm: 10px;
+  --shadow: 0 1px 2px rgb(1 43 83 / 0.04), 0 8px 24px -16px rgb(1 43 83 / 0.22);
+  --shadow-lift: 0 2px 4px rgb(1 43 83 / 0.06), 0 18px 36px -18px rgb(1 43 83 / 0.35);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --navy: #021c36;
+    --blue: #6db3e8;
+    --blue-2: #3d86c2;
+    --on-blue: #021c36;
+    --sky: #0d2a47;
+    --bg: #061a2f;
+    --surface: #0b2440;
+    --surface-2: #10304f;
+    --hover: #143657;
+    --line: #1d4165;
+    --line-soft: #163856;
+    --line-strong: #9ccbef;
+    --fg: #e7f1fa;
+    --muted: #a6bbd0;
+    --faint: #6f88a2;
+    --accent: #7cc0ef;
+    --accent-soft: #123a5e;
+    --accent-ink: #d6ebfb;
+    --on-accent: #021c36;
+    --primary: #7cc0ef;
+    --on-primary: #021c36;
+    --ill-ink: #cfe5f7;
+    --ill-sea: #1f527f;
+    --ill-sand: #4a4a3d;
+    --ill-sun: #f4c45e;
+    --ill-paper: #0b2440;
+    --ill-leaf: #2f6a52;
+    --logo-bg: #7cc0ef;
+    --logo-fg: #021c36;
+    --ink: #cfe5f7;
+    --glass-line: #1d4165;
+    --paper: #f6f9fc;
+    --paper-ink: #13243a;
+    --paper-muted: #5f6e80;
+    --paper-line: #dfe7ef;
+    --paper-head: #ebf2f8;
+    --desk-shadow: 0 24px 50px -24px rgb(0 0 0 / 0.7);
+    --t-auto: #93a6ba;
+    --t-auto-bg: #14324f;
+    --t-manual: #d9a670;
+    --t-manual-bg: #33301f;
+    --t-required: #ff8a78;
+    --t-required-bg: #3d2328;
+    --t-done: #73cf92;
+    --t-done-bg: #133a33;
+    --warn: #f4c45e;
+    --warn-bg: #33321d;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3);
+    --shadow-lift: 0 18px 36px -18px rgb(0 0 0 / 0.7);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --navy: #021c36;
+  --blue: #6db3e8;
+  --blue-2: #3d86c2;
+  --on-blue: #021c36;
+  --sky: #0d2a47;
+  --bg: #061a2f;
+  --surface: #0b2440;
+  --surface-2: #10304f;
+  --hover: #143657;
+  --line: #1d4165;
+  --line-soft: #163856;
+  --line-strong: #9ccbef;
+  --fg: #e7f1fa;
+  --muted: #a6bbd0;
+  --faint: #6f88a2;
+  --accent: #7cc0ef;
+  --accent-soft: #123a5e;
+  --accent-ink: #d6ebfb;
+  --on-accent: #021c36;
+  --primary: #7cc0ef;
+  --on-primary: #021c36;
+  --ill-ink: #cfe5f7;
+  --ill-sea: #1f527f;
+  --ill-sand: #4a4a3d;
+  --ill-sun: #f4c45e;
+  --ill-paper: #0b2440;
+  --ill-leaf: #2f6a52;
+  --logo-bg: #7cc0ef;
+  --logo-fg: #021c36;
+  --ink: #cfe5f7;
+  --glass-line: #1d4165;
+  --paper: #f6f9fc;
+  --paper-ink: #13243a;
+  --paper-muted: #5f6e80;
+  --paper-line: #dfe7ef;
+  --paper-head: #ebf2f8;
+  --desk-shadow: 0 24px 50px -24px rgb(0 0 0 / 0.7);
+  --t-auto: #93a6ba;
+  --t-auto-bg: #14324f;
+  --t-manual: #d9a670;
+  --t-manual-bg: #33301f;
+  --t-required: #ff8a78;
+  --t-required-bg: #3d2328;
+  --t-done: #73cf92;
+  --t-done-bg: #133a33;
+  --warn: #f4c45e;
+  --warn-bg: #33321d;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-lift: 0 18px 36px -18px rgb(0 0 0 / 0.7);
+  color-scheme: dark;
+}
+
+/* ---------- seasons: the drawings and the sky change with the time of year ---------- */
+/* raw season colors (summer is the default) */
+:root {
+  --s-sun: #f4c45e;
+  --s-sand: #efe1c3;
+  --s-sea: #a9cfea;
+  --s-accent: #ef7f6e;
+  --s-flower: #e8574c;
+  --s-rock: #cdd6dd;
+  --s-cloud: #ffffff;
+  --s-sky: #e6f0f8;
+}
+
+:root[data-season="autumn"] {
+  --s-sun: #eb9a4a;
+  --s-sand: #e6d5b5;
+  --s-sea: #9dbad2;
+  --s-accent: #dc8a3c;
+  --s-flower: #c9573f;
+  --s-rock: #c9cfd4;
+  --s-cloud: #f6f7f9;
+  --s-sky: #eaeef3;
+}
+
+:root[data-season="winter"] {
+  --s-sun: #efd889;
+  --s-sand: #d6d2c8;
+  --s-sea: #6f9dc6;
+  --s-accent: #4f7fb3;
+  --s-flower: #c95b5b;
+  --s-rock: #aab6c1;
+  --s-cloud: #dde5ee;
+  --s-sky: #dfe6ee;
+}
+
+:root[data-season="spring"] {
+  --s-sun: #f5d36a;
+  --s-sand: #efe5cc;
+  --s-sea: #a6d4e8;
+  --s-accent: #a184d6;
+  --s-flower: #e5524a;
+  --s-rock: #cfd8de;
+  --s-cloud: #ffffff;
+  --s-sky: #eef1fa;
+}
+
+/* light: the season colors as they are */
+:root {
+  --ill-sun: var(--s-sun);
+  --ill-sand: var(--s-sand);
+  --ill-sea: var(--s-sea);
+  --ill-accent: var(--s-accent);
+  --ill-flower: var(--s-flower);
+  --ill-rock: var(--s-rock);
+  --ill-cloud: var(--s-cloud);
+  --sky: var(--s-sky);
+}
+
+/* dark: the same seasons, sunk into the night blue */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ill-sun: var(--s-sun);
+    --ill-sand: color-mix(in srgb, var(--s-sand) 28%, #0b2440);
+    --ill-sea: color-mix(in srgb, var(--s-sea) 40%, #0b2440);
+    --ill-accent: color-mix(in srgb, var(--s-accent) 80%, #0b2440);
+    --ill-flower: var(--s-flower);
+    --ill-rock: color-mix(in srgb, var(--s-rock) 30%, #0b2440);
+    --ill-cloud: color-mix(in srgb, var(--s-cloud) 22%, #0b2440);
+    --sky: color-mix(in srgb, var(--s-sky) 6%, #0d2a47);
+  }
+}
+
+:root[data-theme="dark"] {
+  --ill-sun: var(--s-sun);
+  --ill-sand: color-mix(in srgb, var(--s-sand) 28%, #0b2440);
+  --ill-sea: color-mix(in srgb, var(--s-sea) 40%, #0b2440);
+  --ill-accent: color-mix(in srgb, var(--s-accent) 80%, #0b2440);
+  --ill-flower: var(--s-flower);
+  --ill-rock: color-mix(in srgb, var(--s-rock) 30%, #0b2440);
+  --ill-cloud: color-mix(in srgb, var(--s-cloud) 22%, #0b2440);
+  --sky: color-mix(in srgb, var(--s-sky) 6%, #0d2a47);
+}
+
+/* White City drawings: a coral accent and the course color */
+:root {
+  --ill-coral: #ef8a6e;
+  --ill-c: var(--cc, #2f7fbf);
+}
